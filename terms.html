@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terms of Use - Zootech</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <script>
+        // Force page to start at the top on reload
+        if (history.scrollRestoration) {
+            history.scrollRestoration = 'manual';
+        }
+        window.scrollTo(0, 0);
+
+        window.addEventListener('beforeunload', () => {
+            window.scrollTo(0, 0);
+        });
+
+        window.addEventListener('DOMContentLoaded', () => {
+            if (window.location.hash) {
+                history.replaceState(null, '', window.location.pathname + window.location.search);
+            }
+            window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+        });
+
+        window.addEventListener('pageshow', () => {
+            if (window.location.hash) {
+                history.replaceState(null, '', window.location.pathname + window.location.search);
+            }
+            window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+        });
+    </script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline": "#707974",
+                        "on-surface-variant": "#404944",
+                        "background": "#f8f9fa",
+                        "error-container": "#ffdad6",
+                        "primary-fixed": "#b0f0d6",
+                        "primary": "#003527",
+                        "inverse-surface": "#2e3132",
+                        "secondary-container": "#dfe0e0",
+                        "on-primary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#6e372f",
+                        "primary-fixed-dim": "#95d3ba",
+                        "surface-container-low": "#f3f4f5",
+                        "on-primary-container": "#80bea6",
+                        "on-secondary-container": "#616363",
+                        "surface": "#f8f9fa",
+                        "on-tertiary-fixed": "#380d08",
+                        "tertiary": "#4f1f19",
+                        "surface-container-highest": "#e1e3e4",
+                        "inverse-on-surface": "#f0f1f2",
+                        "on-tertiary-container": "#ea9e93",
+                        "on-background": "#191c1d",
+                        "on-error-container": "#93000a",
+                        "surface-container": "#edeeef",
+                        "surface-container-high": "#e7e8e9",
+                        "inverse-primary": "#95d3ba",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb4a9",
+                        "surface-variant": "#e1e3e4",
+                        "on-primary-fixed-variant": "#0b513d",
+                        "surface-bright": "#f8f9fa",
+                        "error": "#ba1a1a",
+                        "secondary": "#5d5f5f",
+                        "on-secondary": "#ffffff",
+                        "on-surface": "#191c1d",
+                        "on-secondary-fixed-variant": "#454747",
+                        "outline-variant": "#bfc9c3",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "on-error": "#ffffff",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "surface-tint": "#2b6954",
+                        "surface-dim": "#d9dadb",
+                        "secondary-fixed": "#e2e2e2",
+                        "primary-container": "#064e3b",
+                        "tertiary-fixed": "#ffdad5",
+                        "tertiary-container": "#6b342d",
+                        "on-primary-fixed": "#002117"
+                    },
+                    fontFamily: {
+                        body: ["Plus Jakarta Sans", "sans-serif"],
+                        headline: ["Plus Jakarta Sans", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        /* Subtle scientific grid pattern */
+        .bg-grid-pattern {
+            background-image:
+                linear-gradient(to right, rgba(0, 53, 39, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0, 53, 39, 0.05) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+
+<body class="bg-surface text-on-surface font-body antialiased selection:bg-primary-fixed selection:text-primary">
+    <header class="bg-surface sticky top-0 w-full border-b border-outline-variant z-50">
+        <div class="flex justify-between items-center px-4 md:px-16 py-4 max-w-[1280px] mx-auto">
+            <a href="index.html" class="flex items-center gap-3">
+                <!-- <div
+                    class="w-10 h-10 rounded-xl bg-primary text-white flex items-center justify-center font-bold text-2xl">
+                    Z
+                </div> -->
+                <span class="text-2xl font-bold tracking-tight text-primary">ZOOTECH</span>
+            </a>
+
+            <!-- <a href="index.html" class="text-sm font-medium text-primary hover:opacity-70 transition-opacity">
+                Back to website
+            </a> -->
+        </div>
+    </header>
+
+    <main>
+        <section class="max-w-[900px] mx-auto px-4 md:px-8 py-16 md:py-24">
+            <div class="mb-12">
+                <p class="text-xs font-semibold tracking-[0.2em] text-primary uppercase mb-4">
+                    LEGAL
+                </p>
+                <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-primary mb-5">
+                    Terms of Use
+                </h1>
+                <p class="text-base text-on-surface-variant">
+                    Last updated: September 6, 2026
+                </p>
+            </div>
+
+            <div class="space-y-10 text-base leading-7 text-on-surface-variant">
+                <section>
+                    <h2 class="text-2xl font-semibold text-primary mb-3">1. Acceptance of these terms</h2>
+                    <p>
+                        By accessing or using the Zootech website, you agree to these Terms of Use.
+                        If you do not agree with these terms, please do not use the website.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-semibold text-primary mb-3">2. About Zootech</h2>
+                    <p>
+                        Zootech is an animal science and agricultural technology research organization.
+                        We conduct research and develop practical technologies and solutions relating to
+                        livestock, agriculture, animal health, nutrition, production, and related fields.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-semibold text-primary mb-3">3. Website information</h2>
+                    <p>
+                        The information on this website is provided for general informational and research
+                        purposes. Although we aim to keep information accurate and useful, we do not guarantee
+                        that all content is complete, current, or error-free.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-semibold text-primary mb-3">4. Research and technical content</h2>
+                    <p>
+                        Research findings, technical descriptions, projections, and other material published
+                        on this website may change as research develops and additional evidence becomes available.
+                        Content should not be treated as a substitute for professional veterinary, agricultural,
+                        medical, legal, financial, or other professional advice.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-semibold text-primary mb-3">5. No veterinary or professional diagnosis</h2>
+                    <p>
+                        Any animal-health, agricultural, or scientific information made available through
+                        Zootech products or services is intended to support information gathering and decision
+                        making. It does not establish a veterinary diagnosis, treatment plan, laboratory result,
+                        or professional opinion unless expressly provided by a qualified professional.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-semibold text-primary mb-3">6. Acceptable use</h2>
+                    <p class="mb-4">
+                        You agree not to:
+                    </p>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li>Use the website for unlawful, fraudulent, or abusive purposes.</li>
+                        <li>Attempt to gain unauthorized access to our systems, data, or infrastructure.</li>
+                        <li>Interfere with the availability, security, or operation of the website.</li>
+                        <li>Upload or transmit malicious code, harmful files, or content that violates applicable law.
+                        </li>
+                        <li>Misrepresent your identity or your affiliation with an organization.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-semibold text-primary mb-3">7. Intellectual property</h2>
+                    <p>
+                        Unless otherwise stated, the Zootech website, branding, text, graphics, research
+                        presentation, software, and other original materials are owned by or licensed to
+                        Zootech and are protected by applicable intellectual property laws.
+                    </p>
+                    <p class="mt-4">
+                        You may view and use website content for personal, educational, or legitimate business
+                        purposes. You may not reproduce, modify, distribute, sell, or commercially exploit our
+                        materials without appropriate permission, except where permitted by law.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-semibold text-primary mb-3">8. User-submitted content</h2>
+                    <p>
+                        If you submit text, images, files, research materials, feedback, or other content
+                        to Zootech, you represent that you have the right to provide that content. You retain
+                        ownership of your content, subject to any separate agreement you have with Zootech.
+                    </p>
+                    <p class="mt-4">
+                        By submitting content, you grant Zootech permission to use it as reasonably necessary
+                        to respond to your request, provide the relevant service, conduct agreed research,
+                        or operate and improve our products, subject to applicable privacy obligations and
+                        any separate agreement governing the submission.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-semibold text-primary mb-3">9. Third-party services and links</h2>
+                    <p>
+                        The website may contain links to third-party websites, applications, or services.
+                        These are provided for convenience. Zootech does not control and is not responsible
+                        for third-party content, availability, security, or privacy practices.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-semibold text-primary mb-3">10. Availability and changes</h2>
+                    <p>
+                        We may modify, suspend, or discontinue any part of the website or its content at any
+                        time. We do not guarantee that the website will always be available, uninterrupted,
+                        secure, or free from errors.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-semibold text-primary mb-3">11. Disclaimer</h2>
+                    <p>
+                        To the fullest extent permitted by law, the website and its content are provided
+                        without warranties of any kind, whether express or implied. Zootech does not warrant
+                        that the website or its content will meet every user's requirements or that errors
+                        will always be corrected.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-semibold text-primary mb-3">12. Limitation of liability</h2>
+                    <p>
+                        To the fullest extent permitted by applicable law, Zootech will not be liable for
+                        indirect, incidental, special, consequential, or loss-of-profit damages arising from
+                        your use of, or inability to use, the website or its content.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-semibold text-primary mb-3">13. Governing law</h2>
+                    <p>
+                        These Terms of Use are intended to be governed by the laws applicable in Nigeria,
+                        without prejudice to any mandatory legal protections that may apply to a user in
+                        another jurisdiction.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-semibold text-primary mb-3">14. Changes to these terms</h2>
+                    <p>
+                        We may update these Terms of Use from time to time. Changes become effective when
+                        the updated terms are published on this page, unless otherwise stated.
+                    </p>
+                </section>
+
+                <section class="border-t border-outline-variant pt-8">
+                    <h2 class="text-2xl font-semibold text-primary mb-3">15. Contact</h2>
+                    <p>
+                        For questions about these Terms of Use, please contact Zootech through the contact
+                        information provided on our website.
+                    </p>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-[#edeeef] border-t border-outline-variant">
+        <div class="max-w-[1280px] mx-auto px-4 md:px-16 py-10 flex flex-col md:flex-row justify-between gap-6">
+            <div>
+                <div class="flex items-center gap-3 mb-3">
+                    <!-- <div
+                        class="w-9 h-9 rounded-lg bg-primary text-white flex items-center justify-center font-bold text-xl">
+                        Z
+                    </div> -->
+                    <span class="text-xl font-bold text-primary">ZOOTECH</span>
+                </div>
+                <p class="text-sm text-on-surface-variant">
+                    Applied animal science and agricultural technology research group.
+                </p>
+            </div>
+
+            <div class="flex gap-6 text-sm">
+                <a href="privacy.html" class="text-primary underline-offset-4 hover:underline">Privacy</a>
+                <a href="terms.html" class="text-primary underline underline-offset-4 ">Terms</a>
+                <a href="index.html" class="text-primary underline-offset-4 hover:underline">Home</a>
+            </div>
+        </div>
+        <div class="max-w-[1280px] mx-auto px-4 md:px-16 pb-8 text-sm text-on-surface-variant">
+            © 2026 Zootech Research. All rights reserved.
+        </div>
+    </footer>
+</body>
+
+</html>

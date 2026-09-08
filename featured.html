@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Bio-Fermented Sawdust Feed Research - Zootech</title>
+    <meta name="description"
+        content="Zootech's breakthrough research in converting industrial sawmill sawdust into high-performance, protein-rich livestock feed through solid-state bio-fermentation." />
+    <!-- Browser tab icon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <script>
+        // Force page to start at the top on reload
+        if (history.scrollRestoration) {
+            history.scrollRestoration = 'manual';
+        }
+        window.scrollTo(0, 0);
+
+        window.addEventListener('beforeunload', () => {
+            window.scrollTo(0, 0);
+        });
+
+        window.addEventListener('DOMContentLoaded', () => {
+            if (window.location.hash) {
+                history.replaceState(null, '', window.location.pathname + window.location.search);
+            }
+            window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+        });
+
+        window.addEventListener('pageshow', () => {
+            if (window.location.hash) {
+                history.replaceState(null, '', window.location.pathname + window.location.search);
+            }
+            window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+        });
+    </script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline": "#707974",
+                        "on-surface-variant": "#404944",
+                        "background": "#f8f9fa",
+                        "error-container": "#ffdad6",
+                        "primary-fixed": "#b0f0d6",
+                        "primary": "#003527",
+                        "inverse-surface": "#2e3132",
+                        "secondary-container": "#dfe0e0",
+                        "on-primary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#6e372f",
+                        "primary-fixed-dim": "#95d3ba",
+                        "surface-container-low": "#f3f4f5",
+                        "on-primary-container": "#80bea6",
+                        "on-secondary-container": "#616363",
+                        "surface": "#f8f9fa",
+                        "on-tertiary-fixed": "#380d08",
+                        "tertiary": "#4f1f19",
+                        "surface-container-highest": "#e1e3e4",
+                        "inverse-on-surface": "#f0f1f2",
+                        "on-tertiary-container": "#ea9e93",
+                        "on-background": "#191c1d",
+                        "on-error-container": "#93000a",
+                        "surface-container": "#edeeef",
+                        "surface-container-high": "#e7e8e9",
+                        "inverse-primary": "#95d3ba",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb4a9",
+                        "surface-variant": "#e1e3e4",
+                        "on-primary-fixed-variant": "#0b513d",
+                        "surface-bright": "#f8f9fa",
+                        "error": "#ba1a1a",
+                        "secondary": "#5d5f5f",
+                        "on-secondary": "#ffffff",
+                        "on-surface": "#191c1d",
+                        "on-secondary-fixed-variant": "#454747",
+                        "outline-variant": "#bfc9c3",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "on-error": "#ffffff",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "surface-tint": "#2b6954",
+                        "surface-dim": "#d9dadb",
+                        "secondary-fixed": "#e2e2e2",
+                        "primary-container": "#064e3b",
+                        "tertiary-fixed": "#ffdad5",
+                        "tertiary-container": "#6b342d",
+                        "on-primary-fixed": "#002117"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "md": "24px",
+                        "lg": "48px",
+                        "margin-mobile": "16px",
+                        "xl": "80px",
+                        "margin-desktop": "64px",
+                        "xs": "4px",
+                        "gutter": "24px",
+                        "sm": "12px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "body": ["Plus Jakarta Sans", "sans-serif"],
+                        "headline": ["Plus Jakarta Sans", "sans-serif"],
+                        "label-md": ["Plus Jakarta Sans"],
+                        "body-sm": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "headline-xl": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "headline-lg-mobile": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "label-md": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-sm": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.25", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "headline-xl": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "500" }],
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        /* Subtle scientific grid pattern */
+        .bg-grid-pattern {
+            background-image:
+                linear-gradient(to right, rgba(0, 53, 39, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0, 53, 39, 0.05) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+
+<body class="bg-surface text-on-surface font-body-md antialiased selection:bg-primary-fixed selection:text-primary">
+    <!-- TopNavBar -->
+    <header
+        class="bg-surface dark:bg-on-background sticky top-0 w-full border-b border-outline-variant dark:border-on-surface-variant z-50">
+        <div
+            class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-[1280px] mx-auto">
+            <a href="index.html" class="flex items-center gap-3">
+                <div
+                    class="font-headline-md text-headline-md font-bold tracking-tight text-primary dark:text-primary-fixed">
+                    ZOOTECH
+                </div>
+            </a>
+            <!-- <nav class="hidden md:flex gap-lg font-body-md text-body-md items-center">
+                <a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 ease-in-out"
+                    href="index.html">Home</a>
+                <a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 ease-in-out"
+                    href="index.html#about">About</a>
+                <a class="text-primary dark:text-primary-fixed font-semibold transition-colors duration-200 ease-in-out border-b-2 border-primary dark:border-primary-fixed pb-0.5"
+                    href="index.html#research">Research</a>
+                <a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 ease-in-out"
+                    href="index.html#technology">Technology</a>
+                <a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 ease-in-out"
+                    href="index.html#impact">Impact</a>
+            </nav> -->
+            <a class="hidden md:inline-flex bg-primary text-on-primary rounded font-body-md text-body-md font-medium px-md py-[10px] hover:opacity-90 transition-opacity duration-200 ease-in-out"
+                href="index.html#work-with-us">
+                Work With Us
+            </a>
+            <button id="mobile-menu-button" aria-expanded="false" aria-label="Toggle navigation menu"
+                class="md:hidden text-primary p-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded">
+                <span id="mobile-menu-icon" class="material-symbols-outlined text-[28px]" data-icon="menu">menu</span>
+            </button>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden border-t border-outline-variant dark:border-on-surface-variant bg-surface dark:bg-on-background px-margin-mobile py-6 flex flex-col gap-4 shadow-lg">
+            <!-- <nav class="flex flex-col gap-3 font-body-md text-body-md">
+                <a class="mobile-nav-link text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed py-2 transition-colors duration-200 font-medium"
+                    href="index.html">Home</a>
+                <a class="mobile-nav-link text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed py-2 transition-colors duration-200 font-medium"
+                    href="index.html#about">About</a>
+                <a class="mobile-nav-link text-primary dark:text-primary-fixed font-semibold py-2 transition-colors duration-200"
+                    href="index.html#research">Research</a>
+                <a class="mobile-nav-link text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed py-2 transition-colors duration-200 font-medium"
+                    href="index.html#technology">Technology</a>
+                <a class="mobile-nav-link text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed py-2 transition-colors duration-200 font-medium"
+                    href="index.html#impact">Impact</a>
+            </nav> -->
+            <a class="mobile-nav-link bg-primary text-on-primary rounded text-center font-body-md text-body-md font-medium px-md py-[12px] hover:opacity-90 transition-opacity duration-200 mt-2"
+                href="index.html#work-with-us">
+                Work With Us
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- BREADCRUMB & HEADER -->
+        <!-- <div class="border-b border-outline-variant/60 bg-surface-container-low/40">
+            <div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop py-4">
+                <nav class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface-variant">
+                    <a href="index.html" class="hover:text-primary transition-colors">Home</a>
+                    <span class="text-outline-variant">/</span>
+                    <a href="index.html#research" class="hover:text-primary transition-colors">Research</a>
+                    <span class="text-outline-variant">/</span>
+                    <span class="text-primary font-medium">Animal Nutrition</span>
+                </nav>
+            </div>
+        </div> -->
+
+        <!-- ARTICLE HERO -->
+        <article>
+            <header class="py-lg md:py-xl border-b border-outline-variant bg-surface relative overflow-hidden">
+                <div class="absolute inset-0 bg-grid-pattern opacity-15 pointer-events-none"></div>
+                <div class="max-w-[1020px] mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+                    <!-- Tag / Category Badge -->
+                    <!-- <div class="flex flex-wrap items-center gap-sm mb-md">
+                        <span
+                            class="font-label-md text-label-md text-primary bg-primary-fixed-dim/30 border border-primary-fixed px-3 py-1 rounded tracking-wider uppercase">
+                            FEATURED RESEARCH &bull; ANIMAL NUTRITION
+                        </span>
+                        <span
+                            class="inline-flex items-center gap-1 font-label-md text-label-md text-on-surface-variant bg-surface-container px-2.5 py-1 rounded border border-outline-variant/50">
+                            <span class="material-symbols-outlined text-[16px] text-primary"
+                                data-icon="check_circle">check_circle</span>
+                            Field Trial Completed
+                        </span>
+                    </div> -->
+
+                    <!-- Main Article Title -->
+                    <h1
+                        class="font-headline-xl text-[30px] sm:text-[38px] md:text-headline-xl leading-tight md:leading-[1.18] text-primary mb-md font-bold">
+                        From Timber Waste to High-Performance Feed: Bio-Fermented Cellulose in Modern Livestock
+                        Nutrition
+                    </h1>
+
+                    <!-- Deck / Standfirst -->
+                    <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed mb-lg max-w-3xl">
+                        Sawdust and livestock feed are two concepts you rarely hear together. At Zootech, our research
+                        group has engineered a proprietary solid-state bio-fermentation process that unlocks
+                        recalcitrant wood cellulose—transforming sawmill waste into an easily digestible, protein-rich
+                        dietary staple for commercial ruminant and poultry herds.
+                    </p>
+
+                    <!-- Meta Information Bar -->
+                    <div
+                        class="flex flex-wrap items-center justify-between gap-md pt-md border-t border-outline-variant text-on-surface-variant font-body-sm text-body-sm">
+                        <div class="flex flex-wrap items-center gap-md">
+                            <div class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-[20px]"
+                                    data-icon="science">science</span>
+                                <div>
+                                    <span class="font-medium text-primary">Prof. NM Anigbogu</span>
+                                </div>
+                            </div>
+                            <span class="text-outline-variant hidden sm:inline">&bull;</span>
+                            <div class="flex items-center gap-1.5">
+                                <span class="material-symbols-outlined text-outline text-[18px]"
+                                    data-icon="calendar_today">calendar_today</span>
+                                <span>September 2026</span>
+                            </div>
+                            <span class="text-outline-variant hidden sm:inline">&bull;</span>
+                            <div class="flex items-center gap-1.5">
+                                <span class="material-symbols-outlined text-outline text-[18px]"
+                                    data-icon="schedule">schedule</span>
+                                <span>7 min read</span>
+                            </div>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <!-- <div class="flex items-center gap-sm">
+                            <a href="#citation"
+                                class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded border border-outline-variant hover:border-primary hover:text-primary transition-colors text-xs font-semibold uppercase tracking-wider">
+                                <span class="material-symbols-outlined text-[16px]"
+                                    data-icon="format_quote">format_quote</span>
+                                Cite
+                            </a>
+                            <a href="#working-paper"
+                                class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-primary text-on-primary hover:opacity-90 transition-opacity text-xs font-semibold uppercase tracking-wider">
+                                <span class="material-symbols-outlined text-[16px]" data-icon="download">download</span>
+                                Working Paper
+                            </a>
+                        </div> -->
+                    </div>
+                </div>
+            </header>
+
+            <!-- HERO MEDIA / GRAPHIC -->
+            <div class="bg-surface-container-low border-b border-outline-variant py-8">
+                <div class="max-w-[1020px] mx-auto px-margin-mobile md:px-margin-desktop">
+                    <div class="relative rounded-lg overflow-hidden border border-outline-variant shadow-sm bg-surface">
+                        <div class="grid grid-cols-1 md:grid-cols-12">
+                            <div class="md:col-span-7 h-[280px] sm:h-[360px] md:h-[420px] relative overflow-hidden">
+                                <img src="image0.jpg"
+                                    alt="Livestock herds in experimental trials fed on Zootech bio-fermented feed supplements"
+                                    class="w-full h-full object-cover grayscale-[15%]" />
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent md:hidden">
+                                </div>
+                            </div>
+                            <div
+                                class="md:col-span-5 p-6 md:p-8 flex flex-col justify-between bg-primary text-on-primary relative">
+                                <div class="absolute inset-0 bg-grid-pattern opacity-10 pointer-events-none"></div>
+                                <div class="relative z-10">
+                                    <span
+                                        class="font-label-md text-label-md text-primary-fixed tracking-widest uppercase block mb-2">
+                                        EXPERIMENTAL CONTEXT
+                                    </span>
+                                    <h3 class="font-headline-md text-xl md:text-2xl font-bold mb-3">
+                                        Circular Feedstocks in Controlled Trials
+                                    </h3>
+                                    <p class="font-body-sm text-sm text-primary-fixed-dim leading-relaxed mb-4">
+                                        Over 18 months of intensive feeding trials in the Niger Delta agrarian corridor
+                                        demonstrated sustained daily weight gains and normal liver metabolic profiles in
+                                        ruminant cohorts.
+                                    </p>
+                                </div>
+                                <div
+                                    class="relative z-10 pt-4 border-t border-outline-variant/30 text-xs text-primary-fixed-dim flex justify-between items-center">
+                                    <span>Trial Protocol: ZT-NUTRI-2026-B</span>
+                                    <span class="font-medium text-on-primary">Port Harcourt, NG</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="font-body-sm text-xs text-on-surface-variant mt-3 text-center md:text-left italic">
+                        Figure 1: Multigenerational herd cohorts under observational trial protocols evaluating
+                        metabolic
+                        assimilation of bio-fermented wood cellulose mash.
+                    </p>
+                </div>
+            </div>
+
+            <!-- KEY FINDINGS ABSTRACT CARD -->
+            <section class="max-w-[1020px] mx-auto px-margin-mobile md:px-margin-desktop py-lg">
+                <div
+                    class="bg-surface-container-lowest border-2 border-primary/20 rounded-xl p-6 md:p-8 shadow-sm relative">
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="material-symbols-outlined text-primary text-[24px]"
+                            data-icon="analytics">analytics</span>
+                        <h2 class="font-headline-md text-xl font-bold text-primary tracking-tight">
+                            Key Research Highlights &amp; Performance Metrics
+                        </h2>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-md mt-6">
+                        <!-- Metric 1 -->
+                        <div class="border-l-2 border-primary pl-4 py-1">
+                            <div class="font-headline-xl text-3xl md:text-4xl font-bold text-primary tracking-tight">
+                                +18.4%
+                            </div>
+                            <div
+                                class="font-label-md text-xs uppercase tracking-wider text-on-surface-variant font-semibold mt-1">
+                                Feed Conversion Ratio
+                            </div>
+                            <p class="font-body-sm text-xs text-on-surface-variant mt-1.5 leading-snug">
+                                Statistically significant FCR gain across 120-day ruminant test groups versus untreated
+                                forage.
+                            </p>
+                        </div>
+                        <!-- Metric 2 -->
+                        <div class="border-l-2 border-primary pl-4 py-1">
+                            <div class="font-headline-xl text-3xl md:text-4xl font-bold text-primary tracking-tight">
+                                42.5%
+                            </div>
+                            <div
+                                class="font-label-md text-xs uppercase tracking-wider text-on-surface-variant font-semibold mt-1">
+                                Crude Protein Content
+                            </div>
+                            <p class="font-body-sm text-xs text-on-surface-variant mt-1.5 leading-snug">
+                                Upgraded from &lt;1.8% in virgin sawmill sawdust through fungal mycelial solid-state
+                                enrichment.
+                            </p>
+                        </div>
+                        <!-- Metric 3 -->
+                        <div class="border-l-2 border-primary pl-4 py-1">
+                            <div class="font-headline-xl text-3xl md:text-4xl font-bold text-primary tracking-tight">
+                                -40.2%
+                            </div>
+                            <div
+                                class="font-label-md text-xs uppercase tracking-wider text-on-surface-variant font-semibold mt-1">
+                                Formulation Cost
+                            </div>
+                            <p class="font-body-sm text-xs text-on-surface-variant mt-1.5 leading-snug">
+                                Dramatic reduction in ration input expenditure compared to imported soybean and fishmeal
+                                blends.
+                            </p>
+                        </div>
+                        <!-- Metric 4 -->
+                        <div class="border-l-2 border-primary pl-4 py-1">
+                            <div class="font-headline-xl text-3xl md:text-4xl font-bold text-primary tracking-tight">
+                                0%
+                            </div>
+                            <div
+                                class="font-label-md text-xs uppercase tracking-wider text-on-surface-variant font-semibold mt-1">
+                                Toxic Residues
+                            </div>
+                            <p class="font-body-sm text-xs text-on-surface-variant mt-1.5 leading-snug">
+                                Free from synthetic urea, formaldehyde binders, and heavy metal contaminants through
+                                bio-screening.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- MAIN ARTICLE BODY CONTENT -->
+            <div class="max-w-[1020px] mx-auto px-margin-mobile md:px-margin-desktop pb-xl">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-xl">
+                    <!-- Left / Main Editorial Content -->
+                    <div
+                        class="lg:col-span-8 space-y-8 font-body-md text-body-md text-on-surface-variant leading-relaxed">
+
+                        <!-- Section 1 -->
+                        <section id="bottleneck">
+                            <h2
+                                class="font-headline-lg text-2xl md:text-3xl font-bold text-primary mb-4 tracking-tight">
+                                1. The Global Feed Bottleneck: Why Conventional Proteins Are Failing Farmers
+                            </h2>
+                            <p class="mb-4">
+                                Across global agriculture, animal feed represents between <strong>65% and 75%</strong>
+                                of total
+                                operating expenditure in commercial livestock and poultry production. Over the past
+                                decade,
+                                compounding shocks—including geopolitical volatility, climate-driven harvest failures,
+                                and
+                                currency fluctuations—have made traditional protein concentrates like soybean meal and
+                                wild-caught
+                                fishmeal economically prohibitive for millions of regional farmers.
+                            </p>
+                            <p class="mb-4">
+                                In Sub-Saharan Africa and rapidly urbanizing agrarian hubs, the conflict is even
+                                sharper: food
+                                crops suitable for human direct consumption, such as maize and legumes, are diverted
+                                into animal
+                                feed troughs. The agricultural sector urgently requires abundant, non-food biomass that
+                                can be
+                                upgraded into high-density nutrition without competing for arable acreage or freshwater
+                                resources.
+                            </p>
+                        </section>
+
+                        <!-- Section 2 -->
+                        <section id="lignin" class="border-t border-outline-variant/60 pt-8">
+                            <h2
+                                class="font-headline-lg text-2xl md:text-3xl font-bold text-primary mb-4 tracking-tight">
+                                2. The Sawdust Paradox: Abundant Energy Locked Behind Lignin
+                            </h2>
+                            <p class="mb-4">
+                                Sawmills and timber processing plants throughout West Africa produce tens of thousands
+                                of metric
+                                tons of sawdust daily. Most is disposed of through open-air burning, which releases
+                                toxic particulate
+                                smoke and greenhouse emissions, or dumped into wetlands where it contaminates waterways.
+                            </p>
+                            <p class="mb-4">
+                                Wood fiber is fundamentally rich in holocellulose—comprising <strong>40% to 50%
+                                    cellulose</strong>
+                                and <strong>20% to 30% hemicellulose</strong>. In biochemical terms, it represents pure
+                                glucose and
+                                pentose sugars bound into polymers. The insurmountable obstacle has always been
+                                <em>lignin</em>: a complex, amorphous aromatic polymer that acts as nature's concrete,
+                                shielding
+                                cellulose fibers from digestive microbial enzymes in the gut.
+                            </p>
+
+                            <!-- Callout Box inside text -->
+                            <div class="bg-surface-container-low border-l-4 border-primary p-5 my-6 rounded-r">
+                                <p class="font-body-md text-primary font-semibold mb-1">
+                                    Why Untreated Sawdust Fails in Ruminants:
+                                </p>
+                                <p class="font-body-sm text-sm text-on-surface-variant leading-relaxed">
+                                    Feeding raw, untreated sawdust to ruminants or monogastric animals causes severe
+                                    rumen
+                                    impaction, abrasions to the mucosal epithelial lining, and negative energy balance,
+                                    as the
+                                    animal expends more metabolic energy trying to churn the indigestible matrix than it
+                                    absorbs.
+                                </p>
+                            </div>
+                        </section>
+
+                        <!-- Section 3 -->
+                        <section id="breakthrough" class="border-t border-outline-variant/60 pt-8">
+                            <h2
+                                class="font-headline-lg text-2xl md:text-3xl font-bold text-primary mb-4 tracking-tight">
+                                3. The Zootech Solution: Proprietary Solid-State Bio-Fermentation
+                            </h2>
+                            <p class="mb-4">
+                                Rather than relying on energy-intensive chemical treatments (such as high-pressure acid
+                                hydrolysis),
+                                Zootech's animal nutrition researchers developed a clean biological cascade utilizing
+                                selected
+                                white-rot basidiomycetes and non-pathogenic fungal and yeast consortia:
+                            </p>
+
+                            <!-- Step Process Breakdown -->
+                            <div class="space-y-4 my-6">
+                                <div
+                                    class="flex gap-4 items-start p-4 bg-surface rounded border border-outline-variant/70">
+                                    <span
+                                        class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-sm shrink-0">
+                                        01
+                                    </span>
+                                    <div>
+                                        <h3 class="font-headline-md text-base font-bold text-primary mb-1">
+                                            Mechanical Fractionation &amp; Steam Conditioning
+                                        </h3>
+                                        <p class="font-body-sm text-sm text-on-surface-variant">
+                                            Sawdust is screened for particle size uniformization (0.5mm &ndash; 2.0mm)
+                                            to remove splinter
+                                            hazards, followed by mild thermal hydration to soften the crystalline
+                                            cellulose
+                                            lattice without chemical degradation.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="flex gap-4 items-start p-4 bg-surface rounded border border-outline-variant/70">
+                                    <span
+                                        class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-sm shrink-0">
+                                        02
+                                    </span>
+                                    <div>
+                                        <h3 class="font-headline-md text-base font-bold text-primary mb-1">
+                                            Enzymatic Delignification
+                                        </h3>
+                                        <p class="font-body-sm text-sm text-on-surface-variant">
+                                            Laccase and manganese peroxidase enzymes selectively fracture the
+                                            recalcitrant phenylpropanoid
+                                            matrix of lignin, exposing previously inaccessible cellulose and
+                                            hemicellulose polymers
+                                            to enzymatic digestion.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="flex gap-4 items-start p-4 bg-surface rounded border border-outline-variant/70">
+                                    <span
+                                        class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-sm shrink-0">
+                                        03
+                                    </span>
+                                    <div>
+                                        <h3 class="font-headline-md text-base font-bold text-primary mb-1">
+                                            Single-Cell Protein (SCP) Proliferation
+                                        </h3>
+                                        <p class="font-body-sm text-sm text-on-surface-variant">
+                                            During a 72-hour controlled solid-state fermentation phase, specialized
+                                            microbial inoculants
+                                            consume freed pentose sugars, synthesizing dense fungal biomass containing
+                                            comprehensive
+                                            essential amino acids (lysine, methionine, and threonine).
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="flex gap-4 items-start p-4 bg-surface rounded border border-outline-variant/70">
+                                    <span
+                                        class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-sm shrink-0">
+                                        04
+                                    </span>
+                                    <div>
+                                        <h3 class="font-headline-md text-base font-bold text-primary mb-1">
+                                            Dehydration &amp; Micro-Pelletization
+                                        </h3>
+                                        <p class="font-body-sm text-sm text-on-surface-variant">
+                                            The fermented substrate is low-temperature vacuum dried to preserve enzyme
+                                            stability,
+                                            blended with essential macro-minerals, and cold-pelletized for seamless
+                                            integration into
+                                            standard hopper feeding systems.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Section 4: DATA COMPARISON TABLE -->
+                        <section id="nutritional-data" class="border-t border-outline-variant/60 pt-8">
+                            <h2
+                                class="font-headline-lg text-2xl md:text-3xl font-bold text-primary mb-4 tracking-tight">
+                                4. Nutritional Analysis: How It Compares
+                            </h2>
+                            <p class="mb-6">
+                                Proximate biochemical analysis conducted across repeated trial batches indicates that
+                                Zootech
+                                Bio-Fermented Feed achieves nutrient densities on par with premium commercial
+                                concentrates at a
+                                fraction of the input cost.
+                            </p>
+
+                            <!-- Responsive Data Table -->
+                            <div class="overflow-x-auto border border-outline-variant rounded-lg bg-surface">
+                                <table class="w-full text-left font-body-sm text-sm">
+                                    <thead
+                                        class="bg-surface-container-low text-primary border-b border-outline-variant font-semibold">
+                                        <tr>
+                                            <th class="p-3.5">Biochemical Parameter</th>
+                                            <th class="p-3.5">Raw Sawdust</th>
+                                            <th class="p-3.5">Treated Straw</th>
+                                            <th class="p-3.5 bg-primary-fixed/20 text-primary">Zootech Feed</th>
+                                            <th class="p-3.5">Commercial Soy/Maize</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-outline-variant/40">
+                                        <tr class="hover:bg-surface-container-low/50 transition-colors">
+                                            <td class="p-3.5 font-medium text-primary">Crude Protein (CP %)</td>
+                                            <td class="p-3.5 text-on-surface-variant">1.4%</td>
+                                            <td class="p-3.5 text-on-surface-variant">6.8%</td>
+                                            <td class="p-3.5 font-semibold text-primary bg-primary-fixed/10">42.5%</td>
+                                            <td class="p-3.5 text-on-surface-variant">44.0%</td>
+                                        </tr>
+                                        <tr class="hover:bg-surface-container-low/50 transition-colors">
+                                            <td class="p-3.5 font-medium text-primary">In Vitro Dry Matter Digestibility
+                                            </td>
+                                            <td class="p-3.5 text-on-surface-variant">&lt; 12%</td>
+                                            <td class="p-3.5 text-on-surface-variant">41.2%</td>
+                                            <td class="p-3.5 font-semibold text-primary bg-primary-fixed/10">78.6%</td>
+                                            <td class="p-3.5 text-on-surface-variant">82.0%</td>
+                                        </tr>
+                                        <tr class="hover:bg-surface-container-low/50 transition-colors">
+                                            <td class="p-3.5 font-medium text-primary">Neutral Detergent Fiber (NDF %)
+                                            </td>
+                                            <td class="p-3.5 text-on-surface-variant">84.2%</td>
+                                            <td class="p-3.5 text-on-surface-variant">65.0%</td>
+                                            <td class="p-3.5 font-semibold text-primary bg-primary-fixed/10">31.4%</td>
+                                            <td class="p-3.5 text-on-surface-variant">18.5%</td>
+                                        </tr>
+                                        <tr class="hover:bg-surface-container-low/50 transition-colors">
+                                            <td class="p-3.5 font-medium text-primary">Metabolizable Energy (MJ/kg)</td>
+                                            <td class="p-3.5 text-on-surface-variant">3.1</td>
+                                            <td class="p-3.5 text-on-surface-variant">7.4</td>
+                                            <td class="p-3.5 font-semibold text-primary bg-primary-fixed/10">11.9</td>
+                                            <td class="p-3.5 text-on-surface-variant">12.8</td>
+                                        </tr>
+                                        <tr class="hover:bg-surface-container-low/50 transition-colors">
+                                            <td class="p-3.5 font-medium text-primary">Relative Input Cost Index</td>
+                                            <td class="p-3.5 text-on-surface-variant">Baseline (5)</td>
+                                            <td class="p-3.5 text-on-surface-variant">35</td>
+                                            <td class="p-3.5 font-semibold text-primary bg-primary-fixed/10">48</td>
+                                            <td class="p-3.5 text-on-surface-variant">100 (Standard)</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p class="font-body-sm text-xs text-on-surface-variant mt-2 italic">
+                                Table 1: Standardized proximate analysis of Zootech Bio-Fermented Substrate versus
+                                conventional feed
+                                alternatives (AOAC official methods).
+                            </p>
+                        </section>
+
+                        <!-- Section 5 -->
+                        <section id="herd-health" class="border-t border-outline-variant/60 pt-8">
+                            <h2
+                                class="font-headline-lg text-2xl md:text-3xl font-bold text-primary mb-4 tracking-tight">
+                                5. Animal Performance &amp; Herd Health Findings
+                            </h2>
+                            <p class="mb-4">
+                                During multi-month cohort trials with West African Dwarf goats and ruminant cattle,
+                                animals
+                                receiving up to a 35% dietary inclusion rate of Zootech Bio-Fermented Feed displayed:
+                            </p>
+                            <ul class="list-disc pl-6 space-y-2 mb-6">
+                                <li>
+                                    <strong>Equal or Superior Average Daily Gain (ADG):</strong> Test animals maintained
+                                    an ADG of
+                                    112g/day, compared to 98g/day in the control forage cohort.
+                                </li>
+                                <li>
+                                    <strong>Accelerated Ruminal Flora Maturation:</strong> 16S rRNA gene sequencing
+                                    revealed an
+                                    enrichment of beneficial fibrolitic bacterial families (<em>Ruminococcaceae</em> and
+                                    <em>Fibrobacter</em>) without lactic acidosis symptoms.
+                                </li>
+                                <li>
+                                    <strong>No Histopathological Lesions:</strong> Post-trial tissue biopsies of liver
+                                    and kidney
+                                    parenchyma confirmed zero cytotoxicity, resin acid toxicity, or heavy metal
+                                    accumulation.
+                                </li>
+                            </ul>
+
+                            <!-- Quote / Pullout -->
+                            <blockquote
+                                class="my-6 border-l-4 border-primary pl-6 py-2 italic font-body-lg text-primary bg-surface-container-low/60 rounded-r">
+                                "We are effectively taking an environmental liability—mountains of sawdust rotting or
+                                burning beside
+                                urban centers—and translating it into affordable protein for everyday livestock
+                                farmers."
+                            </blockquote>
+                        </section>
+
+                        <!-- Section 6: SUSTAINABILITY & CIRCULAR ECONOMY -->
+                        <section id="sustainability" class="border-t border-outline-variant/60 pt-8">
+                            <h2
+                                class="font-headline-lg text-2xl md:text-3xl font-bold text-primary mb-4 tracking-tight">
+                                6. Environmental Impact &amp; Scalability
+                            </h2>
+                            <p class="mb-4">
+                                Every metric ton of Zootech bio-fermented feed manufactured diverts approximately 1.4
+                                metric tons of
+                                raw sawdust from open burning or open dumpsites, eliminating particulate matter
+                                pollution (PM2.5) and
+                                reducing carbon dioxide equivalent emissions by an estimated <strong>620 kg
+                                    CO₂e</strong> per ton of
+                                feed produced.
+                            </p>
+                            <p class="mb-4">
+                                By localizing feed processing in proximity to timber harvesting corridors, feed
+                                production facilities
+                                can eliminate long-distance maritime freight, hedge against currency devaluation, and
+                                foster local
+                                industrial biotechnology jobs.
+                            </p>
+                        </section>
+
+                        <!-- CITATION & REPRODUCIBILITY CARD -->
+                        <!-- <div id="citation"
+                            class="bg-surface-container-low rounded-lg p-6 border border-outline-variant my-8">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="font-label-md text-xs uppercase tracking-wider text-primary font-bold">
+                                    Scientific Citation &amp; BibTeX
+                                </span>
+                                <button id="copy-citation-btn"
+                                    class="inline-flex items-center gap-1 font-body-sm text-xs font-semibold text-primary hover:underline">
+                                    <span class="material-symbols-outlined text-[16px]"
+                                        data-icon="content_copy">content_copy</span>
+                                    <span id="copy-btn-text">Copy Citation</span>
+                                </button>
+                            </div>
+                            <pre id="citation-text"
+                                class="font-mono text-xs text-on-surface-variant bg-surface p-4 rounded border border-outline-variant/60 overflow-x-auto whitespace-pre">@article{zootech2026sawdustfeed,
+  title={Bioconversion of Lignocellulosic Sawdust into High-Protein Ruminant Feedstock via Solid-State Fermentation},
+  author={Zootech Animal Nutrition &amp; Biotechnology Research Group},
+  journal={Zootech Working Papers in Applied Animal Science},
+  volume={4},
+  number={2},
+  pages={1--18},
+  year={2026},
+  publisher={Zootech Research, Port Harcourt, Nigeria}
+}</pre>
+                        </div> -->
+
+                        <!-- WORKING PAPER DOWNLOAD CARD -->
+                        <div id="working-paper"
+                            class="bg-primary text-on-primary rounded-lg p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 relative overflow-hidden">
+                            <div class="absolute inset-0 bg-grid-pattern opacity-10 pointer-events-none"></div>
+                            <div class="relative z-10">
+                                <span
+                                    class="font-label-md text-xs text-primary-fixed uppercase tracking-wider block mb-1">
+                                    TECHNICAL PREPRINT
+                                </span>
+                                <h3 class="font-headline-md text-xl md:text-2xl font-bold mb-2">
+                                    Download Complete Working Paper (PDF)
+                                </h3>
+                                <p class="font-body-sm text-sm text-primary-fixed-dim max-w-xl">
+                                    Includes comprehensive proximate analysis data, fungal strain isolation protocols,
+                                    120-day
+                                    growth curves, and amino acid chromatograms.
+                                </p>
+                            </div>
+                            <a href="mailto:info@agfunder.com?subject=Inquiry%20Regarding%20Zootech%20Animal%20Feed%20Research"
+                                class="relative z-10 shrink-0 bg-surface text-primary font-semibold px-6 py-3 rounded hover:bg-primary-fixed transition-colors flex items-center gap-2 font-body-md text-sm">
+                                <span class="material-symbols-outlined text-[18px]" data-icon="download">download</span>
+                                Request Paper PDF
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right Sidebar: Sticky Meta, Navigation, and Author Details -->
+                    <aside class="lg:col-span-4 space-y-6">
+                        <!-- Quick Outline Card -->
+                        <div class="border border-outline-variant rounded-lg p-6 bg-surface lg:sticky lg:top-24">
+                            <h4
+                                class="font-label-md text-xs uppercase tracking-wider text-primary font-bold mb-4 pb-2 border-b border-outline-variant">
+                                Table of Contents
+                            </h4>
+                            <nav class="space-y-2.5 font-body-sm text-sm text-on-surface-variant">
+                                <a href="#bottleneck" class="block hover:text-primary transition-colors">1. The Feed
+                                    Bottleneck</a>
+                                <a href="#lignin" class="block hover:text-primary transition-colors">2. The Sawdust
+                                    Paradox</a>
+                                <a href="#breakthrough" class="block hover:text-primary transition-colors">3.
+                                    Solid-State Fermentation</a>
+                                <a href="#nutritional-data" class="block hover:text-primary transition-colors">4.
+                                    Nutritional Comparison</a>
+                                <a href="#herd-health" class="block hover:text-primary transition-colors">5. Herd Health
+                                    &amp; ADG Findings</a>
+                                <a href="#sustainability" class="block hover:text-primary transition-colors">6.
+                                    Environmental Scalability</a>
+                                <a href="#working-paper" class="block hover:text-primary transition-colors">7. Request
+                                    Working Paper</a>
+                            </nav>
+
+                            <!-- Author Card -->
+                            <div class="mt-6 pt-6 border-t border-outline-variant">
+                                <span
+                                    class="font-label-md text-[11px] uppercase tracking-wider text-on-surface-variant block mb-2">
+                                    AUTHOR
+                                </span>
+                                <div class="flex items-center gap-3">
+                                    <!-- <div
+                                        class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-sm">
+                                        NM
+                                    </div> -->
+                                    <div>
+                                        <div class="font-semibold text-primary text-sm">Prof. NM Anigbogu</div>
+                                        <div class="text-xs text-on-surface-variant"> Head, Zootech Research
+                                            Department</div>
+                                    </div>
+                                </div>
+                                <!-- <p class="text-xs text-on-surface-variant mt-3 leading-relaxed">
+                                    Port Harcourt Innovation Facility, Rivers State, Nigeria. Translating academic
+                                    animal science
+                                    into commercial agricultural technologies.
+                                </p> -->
+                            </div>
+
+                            <!-- Commercial Trial CTA -->
+                            <div class="mt-6 p-4 rounded bg-surface-container-low border border-outline-variant/60">
+                                <span
+                                    class="font-label-md text-[11px] uppercase tracking-wider text-primary font-bold block mb-1">
+                                    COMMERCIAL PILOTS
+                                </span>
+                                <p class="text-xs text-on-surface-variant mb-3 leading-relaxed">
+                                    Interested in testing Zootech Bio-Fermented Feed formulations in your commercial
+                                    feed mill or
+                                    livestock operation?
+                                </p>
+                                <a href="index.html#work-with-us"
+                                    class="text-xs font-semibold text-primary underline underline-offset-4 hover:opacity-80 flex items-center gap-1">
+                                    Inquire about licensing
+                                    <span class="material-symbols-outlined text-[14px]"
+                                        data-icon="arrow_forward">arrow_forward</span>
+                                </a>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </article>
+
+
+
+        <!-- NEWSLETTER SUBSCRIPTION SECTION -->
+        <section class="py-xl bg-surface border-t border-outline-variant">
+            <div class="max-w-[800px] mx-auto px-margin-mobile md:px-margin-desktop text-center">
+                <span class="material-symbols-outlined text-primary text-[36px] mb-2" data-icon="mail">mail</span>
+                <h2 class="font-headline-lg text-2xl md:text-3xl font-bold text-primary mb-3">
+                    Stay Updated on our Research
+                </h2>
+                <p class="font-body-md text-sm md:text-base text-on-surface-variant max-w-lg mx-auto mb-6">
+                    Receive preprint notifications, field trial whitepapers, and updates on our innovations directly to
+                    your inbox.
+                </p>
+                <form id="newsletter-form" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
+                    onsubmit="handleNewsletter(event)">
+                    <input type="email" required placeholder="Enter your institutional or work email"
+                        class="flex-1 rounded border border-outline-variant px-4 py-2.5 font-body-sm text-sm focus:outline-none focus:ring-2 focus:ring-primary bg-surface" />
+                    <button type="submit"
+                        class="bg-primary text-on-primary font-medium px-6 py-2.5 rounded hover:opacity-90 transition-opacity font-body-sm text-sm whitespace-nowrap">
+                        Subscribe
+                    </button>
+                </form>
+                <p id="newsletter-success" class="hidden text-xs text-primary font-semibold mt-3">
+                    Thank you! You have been added to the Zootech research dissemination list.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-surface-container-low border-t border-outline-variant">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-lg px-margin-desktop py-xl max-w-[1280px] mx-auto">
+            <div class="md:col-span-4 flex flex-col gap-md">
+                <div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed">
+                    ZOOTECH
+                </div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">
+                    Applied animal science and agricultural technology research group.
+                </p>
+            </div>
+            <div class="md:col-span-8 flex flex-wrap gap-xl font-body-sm text-body-sm justify-start md:justify-end">
+                <div class="flex flex-col gap-sm">
+                    <span class="font-label-md text-label-md text-primary uppercase tracking-wider">Address</span>
+                    <p class="text-on-surface-variant dark:text-surface-variant">
+                        7th avenue, Sars road,<br>
+                        Portharcourt
+                    </p>
+                </div>
+                <div class="flex flex-col gap-sm">
+                    <span class="font-label-md text-label-md text-primary uppercase tracking-wider">Connect</span>
+                    <a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed underline decoration-2 underline-offset-4 transition-all duration-300"
+                        href="#">LinkedIn</a>
+                    <a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed underline decoration-2 underline-offset-4 transition-all duration-300"
+                        href="index.html#work-with-us">Say hello</a>
+                </div>
+            </div>
+            <div
+                class="md:col-span-12 border-t border-outline-variant/30 pt-md mt-md flex justify-between items-center font-body-sm text-body-sm text-on-surface-variant">
+                <p>&copy; 2026 Zootech Research. All rights reserved.</p>
+                <div class="flex gap-md">
+                    <a class="hover:text-primary transition-colors text-primary underline-offset-4 hover:underline"
+                        href="privacy.html">Privacy</a>
+                    <a class="hover:text-primary transition-colors text-primary underline-offset-4 hover:underline"
+                        href="terms.html">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Mobile Menu Controller
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuIcon = document.getElementById('mobile-menu-icon');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        if (mobileMenuButton && mobileMenu) {
+            function toggleMobileMenu() {
+                const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+                mobileMenu.classList.toggle('hidden');
+                mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+                if (mobileMenuIcon) {
+                    mobileMenuIcon.textContent = isExpanded ? 'menu' : 'close';
+                }
+            }
+
+            function closeMobileMenu() {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
+                if (mobileMenuIcon) {
+                    mobileMenuIcon.textContent = 'menu';
+                }
+            }
+
+            mobileMenuButton.addEventListener('click', toggleMobileMenu);
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', closeMobileMenu);
+            });
+        }
+
+        // Citation Copy Script
+        const copyBtn = document.getElementById('copy-citation-btn');
+        const copyText = document.getElementById('copy-btn-text');
+        const citationEl = document.getElementById('citation-text');
+
+        if (copyBtn && citationEl) {
+            copyBtn.addEventListener('click', () => {
+                navigator.clipboard.writeText(citationEl.textContent.trim()).then(() => {
+                    copyText.textContent = 'Copied!';
+                    setTimeout(() => {
+                        copyText.textContent = 'Copy Citation';
+                    }, 2500);
+                }).catch(err => {
+                    console.error('Could not copy citation: ', err);
+                });
+            });
+        }
+
+        // Newsletter Handler
+        function handleNewsletter(e) {
+            e.preventDefault();
+            const form = document.getElementById('newsletter-form');
+            const success = document.getElementById('newsletter-success');
+            if (form && success) {
+                form.classList.add('opacity-50', 'pointer-events-none');
+                success.classList.remove('hidden');
+            }
+        }
+    </script>
+</body>
+
+</html>

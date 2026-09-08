@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy - Zootech</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <script>
+        // Force page to start at the top on reload
+        if (history.scrollRestoration) {
+            history.scrollRestoration = 'manual';
+        }
+        window.scrollTo(0, 0);
+
+        window.addEventListener('beforeunload', () => {
+            window.scrollTo(0, 0);
+        });
+
+        window.addEventListener('DOMContentLoaded', () => {
+            if (window.location.hash) {
+                history.replaceState(null, '', window.location.pathname + window.location.search);
+            }
+            window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+        });
+
+        window.addEventListener('pageshow', () => {
+            if (window.location.hash) {
+                history.replaceState(null, '', window.location.pathname + window.location.search);
+            }
+            window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+        });
+    </script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline": "#707974",
+                        "on-surface-variant": "#404944",
+                        "background": "#f8f9fa",
+                        "error-container": "#ffdad6",
+                        "primary-fixed": "#b0f0d6",
+                        "primary": "#003527",
+                        "inverse-surface": "#2e3132",
+                        "secondary-container": "#dfe0e0",
+                        "on-primary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#6e372f",
+                        "primary-fixed-dim": "#95d3ba",
+                        "surface-container-low": "#f3f4f5",
+                        "on-primary-container": "#80bea6",
+                        "on-secondary-container": "#616363",
+                        "surface": "#f8f9fa",
+                        "on-tertiary-fixed": "#380d08",
+                        "tertiary": "#4f1f19",
+                        "surface-container-highest": "#e1e3e4",
+                        "inverse-on-surface": "#f0f1f2",
+                        "on-tertiary-container": "#ea9e93",
+                        "on-background": "#191c1d",
+                        "on-error-container": "#93000a",
+                        "surface-container": "#edeeef",
+                        "surface-container-high": "#e7e8e9",
+                        "inverse-primary": "#95d3ba",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb4a9",
+                        "surface-variant": "#e1e3e4",
+                        "on-primary-fixed-variant": "#0b513d",
+                        "surface-bright": "#f8f9fa",
+                        "error": "#ba1a1a",
+                        "secondary": "#5d5f5f",
+                        "on-secondary": "#ffffff",
+                        "on-surface": "#191c1d",
+                        "on-secondary-fixed-variant": "#454747",
+                        "outline-variant": "#bfc9c3",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "on-error": "#ffffff",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "surface-tint": "#2b6954",
+                        "surface-dim": "#d9dadb",
+                        "secondary-fixed": "#e2e2e2",
+                        "primary-container": "#064e3b",
+                        "tertiary-fixed": "#ffdad5",
+                        "tertiary-container": "#6b342d",
+                        "on-primary-fixed": "#002117"
+                    },
+                    fontFamily: {
+                        body: ["Plus Jakarta Sans", "sans-serif"],
+                        headline: ["Plus Jakarta Sans", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        /* Subtle scientific grid pattern */
+        .bg-grid-pattern {
+            background-image:
+                linear-gradient(to right, rgba(0, 53, 39, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0, 53, 39, 0.05) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+
+<body class="bg-surface text-on-surface font-body antialiased selection:bg-primary-fixed selection:text-primary">
+    <header class="bg-surface sticky top-0 w-full border-b border-outline-variant z-50">
+        <div class="flex justify-between items-center px-4 md:px-16 py-4 max-w-[1280px] mx-auto">
+            <a href="index.html" class="flex items-center gap-3">
+                <!-- <div
+                    class="w-10 h-10 rounded-xl bg-primary text-white flex items-center justify-center font-bold text-2xl">
+                    Z
+                </div> -->
+                <span class="text-2xl font-bold tracking-tight text-primary">ZOOTECH</span>
+            </a>
+
+            <!-- <a href="index.html" class="text-sm font-medium text-primary hover:opacity-70 transition-opacity">
+                Back to website
+            </a> -->
+        </div>
+    </header>
+
+    <main>
+        <section class="max-w-[900px] mx-auto px-4 md:px-8 py-16 md:py-24">
+            <div class="mb-12">
+                <p class="text-xs font-semibold tracking-[0.2em] text-primary uppercase mb-4">
+                    LEGAL
+                </p>
+                <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-primary mb-5">
+                    Privacy Policy
+                </h1>
+                <p class="text-base text-on-surface-variant">
+                    Last updated: September 6, 2026
+                </p>
+            </div>
+
+            <div class="space-y-10 text-base leading-7 text-on-surface-variant">
+                <section>
+                    <h2 class="text-2xl font-semibold text-primary mb-3">1. About this policy</h2>
+                    <p>
+                        Zootech ("Zootech", "we", "us", or "our") is an animal science and agricultural
+                        technology research organization. This Privacy Policy explains how we may collect,
+                        use, store, and protect information when you visit our website, contact us, or use
+                        our services and technologies.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-semibold text-primary mb-3">2. Information we may collect</h2>
+                    <p class="mb-4">
+                        Depending on how you interact with Zootech, we may collect information such as:
+                    </p>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li>Contact information you voluntarily provide, such as your name, email address, organization,
+                            or message.</li>
+                        <li>Information submitted when you inquire about research, partnerships, funding, or commercial
+                            opportunities.</li>
+                        <li>Basic technical information such as browser type, device information, IP address, and
+                            general website usage information.</li>
+                        <li>Information contained in files, images, or other materials you choose to send to us.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-semibold text-primary mb-3">3. How we use information</h2>
+                    <p class="mb-4">
+                        We may use information we receive to:
+                    </p>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li>Respond to inquiries and communicate with you.</li>
+                        <li>Evaluate and manage research, academic, technology, and commercial partnerships.</li>
+                        <li>Provide, maintain, improve, and secure our website and services.</li>
+                        <li>Develop and evaluate agricultural and animal-science technologies.</li>
+                        <li>Meet legal, regulatory, security, and administrative requirements.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-semibold text-primary mb-3">4. Research and submitted data</h2>
+                    <p>
+                        Zootech may conduct research involving agricultural, livestock, environmental,
+                        operational, or other scientific information. Where information is submitted to us
+                        for research or product development, we will use it for the purpose for which it was
+                        provided or another compatible lawful purpose. We will take reasonable steps to
+                        protect confidential information and personal data.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-semibold text-primary mb-3">5. Cookies and analytics</h2>
+                    <p>
+                        Our website may use cookies or similar technologies to support essential website
+                        functionality, understand website usage, and improve the experience. Where required,
+                        we will provide appropriate choices or notices regarding non-essential cookies.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-semibold text-primary mb-3">6. Sharing information</h2>
+                    <p>
+                        We do not sell personal information. We may share information with trusted service
+                        providers, research collaborators, professional advisers, or other parties where
+                        reasonably necessary to operate our services, conduct legitimate research, fulfill
+                        a request, protect our rights, or comply with applicable law.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-semibold text-primary mb-3">7. Data security</h2>
+                    <p>
+                        We use reasonable technical and organizational measures designed to protect information
+                        against unauthorized access, loss, misuse, alteration, or disclosure. However, no
+                        internet transmission or storage system can be guaranteed to be completely secure.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-semibold text-primary mb-3">8. Data retention</h2>
+                    <p>
+                        We retain information only for as long as reasonably necessary for the purpose for
+                        which it was collected, to maintain business and research records, resolve disputes,
+                        enforce agreements, or satisfy legal and regulatory obligations.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-semibold text-primary mb-3">9. Your privacy rights</h2>
+                    <p>
+                        Depending on applicable law, you may have rights relating to your personal data,
+                        including rights to request access, correction, deletion, restriction, or other
+                        appropriate remedies. Requests may be subject to lawful limitations and verification.
+                    </p>
+                    <p class="mt-4">
+                        Where applicable, Zootech will handle personal data in accordance with the Nigeria
+                        Data Protection Act, 2023 and applicable guidance of the Nigeria Data Protection
+                        Commission.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-semibold text-primary mb-3">10. Children's privacy</h2>
+                    <p>
+                        Our website and services are not intentionally directed at children. We do not
+                        knowingly collect personal information from children without an appropriate legal
+                        basis or consent where required.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-semibold text-primary mb-3">11. Third-party services</h2>
+                    <p>
+                        Our website or services may link to or rely on third-party platforms and services.
+                        Those services operate under their own terms and privacy policies. Zootech is not
+                        responsible for the privacy practices of third-party websites or services.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-semibold text-primary mb-3">12. Changes to this policy</h2>
+                    <p>
+                        We may update this Privacy Policy from time to time to reflect changes in our
+                        services, technology, legal requirements, or practices. The updated version will
+                        be posted on this page with a revised "Last updated" date.
+                    </p>
+                </section>
+
+                <section class="border-t border-outline-variant pt-8">
+                    <h2 class="text-2xl font-semibold text-primary mb-3">13. Contact</h2>
+                    <p>
+                        For privacy questions, data requests, or concerns about this policy, please contact
+                        Zootech through the contact information provided on our website.
+                    </p>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-[#edeeef] border-t border-outline-variant">
+        <div class="max-w-[1280px] mx-auto px-4 md:px-16 py-10 flex flex-col md:flex-row justify-between gap-6">
+            <div>
+                <div class="flex items-center gap-3 mb-3">
+                    <!-- <div
+                        class="w-9 h-9 rounded-lg bg-primary text-white flex items-center justify-center font-bold text-xl">
+                        Z
+                    </div> -->
+                    <span class="text-xl font-bold text-primary">ZOOTECH</span>
+                </div>
+                <p class="text-sm text-on-surface-variant">
+                    Applied animal science and agricultural technology research group.
+                </p>
+            </div>
+
+            <div class="flex gap-6 text-sm">
+                <a href="privacy.html" class="text-primary underline underline-offset-4">Privacy</a>
+                <a href="terms.html" class="text-primary underline-offset-4 hover:underline">Terms</a>
+                <a href="index.html" class="text-primary underline-offset-4 hover:underline">Home</a>
+            </div>
+        </div>
+        <div class="max-w-[1280px] mx-auto px-4 md:px-16 pb-8 text-sm text-on-surface-variant">
+            © 2026 Zootech Research. All rights reserved.
+        </div>
+    </footer>
+</body>
+
+</html>

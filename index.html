@@ -6,6 +6,33 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Zootech - Agri-Research &amp; Technology</title>
+    <!-- This tag changes the browser tab icon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <script>
+        // Force page to start at the top on reload
+        if (history.scrollRestoration) {
+            history.scrollRestoration = 'manual';
+        }
+        window.scrollTo(0, 0);
+
+        window.addEventListener('beforeunload', () => {
+            window.scrollTo(0, 0);
+        });
+
+        window.addEventListener('DOMContentLoaded', () => {
+            if (window.location.hash) {
+                history.replaceState(null, '', window.location.pathname + window.location.search);
+            }
+            window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+        });
+
+        window.addEventListener('pageshow', () => {
+            if (window.location.hash) {
+                history.replaceState(null, '', window.location.pathname + window.location.search);
+            }
+            window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+        });
+    </script>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
@@ -202,11 +229,14 @@
     <!-- TopNavBar -->
     <header
         class="bg-surface dark:bg-on-background sticky top-0 w-full border-b border-outline-variant dark:border-on-surface-variant z-50">
-        <div class="flex justify-between items-center px-margin-desktop py-4 max-w-[1280px] mx-auto">
-            <div
-                class="font-headline-md text-headline-md font-bold tracking-tight text-primary dark:text-primary-fixed">
-                ZOOTECH
-            </div>
+        <div
+            class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-[1280px] mx-auto">
+            <a href="index.html" class="flex items-center gap-3">
+                <div
+                    class="font-headline-md text-headline-md font-bold tracking-tight text-primary dark:text-primary-fixed">
+                    ZOOTECH
+                </div>
+            </a>
             <nav class="hidden md:flex gap-lg font-body-md text-body-md items-center">
                 <a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 ease-in-out"
                     href="#about">About</a>
@@ -221,9 +251,29 @@
                 href="#work-with-us">
                 Work With Us
             </a>
-            <button class="md:hidden text-primary">
-                <span class="material-symbols-outlined" data-icon="menu">menu</span>
+            <button id="mobile-menu-button" aria-expanded="false" aria-label="Toggle navigation menu"
+                class="md:hidden text-primary p-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded">
+                <span id="mobile-menu-icon" class="material-symbols-outlined text-[28px]" data-icon="menu">menu</span>
             </button>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden border-t border-outline-variant dark:border-on-surface-variant bg-surface dark:bg-on-background px-margin-mobile py-6 flex flex-col gap-4 shadow-lg">
+            <nav class="flex flex-col gap-3 font-body-md text-body-md">
+                <a class="mobile-nav-link text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed py-2 transition-colors duration-200 font-medium"
+                    href="#about">About</a>
+                <a class="mobile-nav-link text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed py-2 transition-colors duration-200 font-medium"
+                    href="#research">Research</a>
+                <a class="mobile-nav-link text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed py-2 transition-colors duration-200 font-medium"
+                    href="#technology">Technology</a>
+                <a class="mobile-nav-link text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed py-2 transition-colors duration-200 font-medium"
+                    href="#impact">Impact</a>
+            </nav>
+            <a class="mobile-nav-link bg-primary text-on-primary rounded text-center font-body-md text-body-md font-medium px-md py-[12px] hover:opacity-90 transition-opacity duration-200 mt-2"
+                href="#work-with-us">
+                Work With Us
+            </a>
         </div>
     </header>
     <main>
@@ -231,12 +281,12 @@
         <section
             class="relative max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop py-xl md:py-[120px] grid grid-cols-1 md:grid-cols-2 gap-xl items-center min-h-[85vh]">
             <div class="flex flex-col gap-md z-10">
-                <div
+                <!-- <div
                     class="inline-block border border-outline-variant rounded bg-surface-container-low px-sm py-xs w-fit">
                     <span
                         class="font-label-md text-label-md text-on-surface-variant tracking-widest uppercase">AGRI-RESEARCH
                         &amp; TECHNOLOGY</span>
-                </div>
+                </div> -->
                 <h1 class="font-headline-xl text-headline-lg-mobile md:text-headline-xl text-primary max-w-2xl">
                     Turning Animal Science Into Better Agriculture.
                 </h1>
@@ -483,20 +533,20 @@
                     <div
                         class="order-2 md:order-1 h-[400px] w-full rounded border border-outline-variant overflow-hidden">
                         <img class="w-full h-full object-cover grayscale-[20%]"
-                            data-alt="A macro, highly detailed photograph of an advanced agricultural sensor attached to livestock infrastructure. The sensor is sleek, minimal, and constructed of matte gray and deep green materials, reflecting a high-end corporate science aesthetic. The background is a beautifully blurred, bright, natural agricultural setting, contrasting the sharp, precise technology in the foreground. The lighting is natural but highly controlled, emphasizing the form and function of the device."
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBt9hp37Bsrqt5PR5uahON0d1_fhYMvnm4VMNGNCaW_Y5Mf_gZtzKGJryLy15_eZkthGdH812KoP2u9hUAtI2LvNPRlXCAW8z3xIlfWLqwnrawnSIovRa_v7EdmPsxlroD325Qjymm7W0IRuh9RW-WfLZ_6MEP9Smq78sNFtv61GjcdptAYzXbhg32nhuP8uqMvGWXBxwdEwfhwb2zJ-pmZJFTD7DLTtCx6oTznKu4ruoOQJC6nkLT4" />
+                            alt="A photograph of various farm animals (a cow, a sheep, a goat, a pig, and several chickens) gathered together in a grassy pasture in front of a weathered barn."
+                            src="image0.jpg" />
                     </div>
                     <div class="order-1 md:order-2 flex flex-col gap-md">
                         <div class="flex gap-2">
-                            <span
+                            <!-- <span
                                 class="inline-block bg-surface px-2 py-1 rounded border border-outline-variant font-label-md text-label-md text-on-surface-variant">SENSOR
                                 NETWORKS</span>
                             <span
                                 class="inline-block bg-surface px-2 py-1 rounded border border-outline-variant font-label-md text-label-md text-on-surface-variant">FIELD
-                                TRIAL</span>
+                                TRIAL</span> -->
                         </div>
                         <h3 class="font-headline-xl text-headline-lg-mobile md:text-headline-xl text-primary">Project
-                            BioNode</h3>
+                            ZooTech</h3>
                         <p class="font-body-lg text-body-lg text-on-surface-variant">
                             An ongoing field study assessing the viability of low-energy, mesh-networked biometric
                             sensors deployed on free-range livestock. BioNode aims to provide continuous physiological
@@ -504,8 +554,8 @@
                             data-generating entity.
                         </p>
                         <a class="mt-sm flex items-center gap-xs font-body-md text-body-md font-medium text-primary hover:text-primary-container transition-colors w-fit border-b border-primary pb-1"
-                            href="#">
-                            Learn About This Research
+                            href="featured.html">
+                            Learn About This
                             <span class="material-symbols-outlined text-[20px]"
                                 data-icon="arrow_forward">arrow_forward</span>
                         </a>
@@ -553,6 +603,32 @@
                 <span class="material-symbols-outlined" data-icon="chat">chat</span>
             </button>
         </section>
+
+        <!-- NEWSLETTER SUBSCRIPTION SECTION -->
+        <section class="py-xl bg-surface border-t border-outline-variant">
+            <div class="max-w-[800px] mx-auto px-margin-mobile md:px-margin-desktop text-center">
+                <span class="material-symbols-outlined text-primary text-[36px] mb-2" data-icon="mail">mail</span>
+                <h2 class="font-headline-lg text-2xl md:text-3xl font-bold text-primary mb-3">
+                    Stay Updated on our Research
+                </h2>
+                <p class="font-body-md text-sm md:text-base text-on-surface-variant max-w-lg mx-auto mb-6">
+                    Receive preprint notifications, field trial whitepapers, and updates on our innovations directly to
+                    your inbox.
+                </p>
+                <form id="newsletter-form" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
+                    onsubmit="handleNewsletter(event)">
+                    <input type="email" required placeholder="Enter your institutional or work email"
+                        class="flex-1 rounded border border-outline-variant px-4 py-2.5 font-body-sm text-sm focus:outline-none focus:ring-2 focus:ring-primary bg-surface" />
+                    <button type="submit"
+                        class="bg-primary text-on-primary font-medium px-6 py-2.5 rounded hover:opacity-90 transition-opacity font-body-sm text-sm whitespace-nowrap">
+                        Subscribe
+                    </button>
+                </form>
+                <p id="newsletter-success" class="hidden text-xs text-primary font-semibold mt-3">
+                    Thank you! You have been added to the Zootech research dissemination list.
+                </p>
+            </div>
+        </section>
     </main>
     <!-- Footer -->
     <footer
@@ -568,34 +644,80 @@
             </div>
             <div class="md:col-span-8 flex flex-wrap gap-xl font-body-sm text-body-sm justify-start md:justify-end">
                 <div class="flex flex-col gap-sm">
-                    <span class="font-label-md text-label-md text-primary uppercase tracking-wider">Navigation</span>
-                    <a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed underline decoration-2 underline-offset-4 transition-all duration-300"
-                        href="#about">About</a>
-                    <a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed underline decoration-2 underline-offset-4 transition-all duration-300"
-                        href="#research">Research</a>
-                    <a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed underline decoration-2 underline-offset-4 transition-all duration-300"
-                        href="#technology">Technology</a>
-                    <a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed underline decoration-2 underline-offset-4 transition-all duration-300"
-                        href="#impact">Impact</a>
+                    <span class="font-label-md text-label-md text-primary uppercase tracking-wider">Address</span>
+                    <p class="text-on-surface-variant dark:text-surface-variant">
+                        7th avenue, Sars road,<br>
+                        Portharcourt.
+                    </p>
                 </div>
                 <div class="flex flex-col gap-sm">
                     <span class="font-label-md text-label-md text-primary uppercase tracking-wider">Connect</span>
                     <a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed underline decoration-2 underline-offset-4 transition-all duration-300"
                         href="#">LinkedIn</a>
                     <a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed underline decoration-2 underline-offset-4 transition-all duration-300"
-                        href="#">Email</a>
+                        href="#">Say hello</a>
                 </div>
             </div>
             <div
                 class="md:col-span-12 border-t border-outline-variant/30 pt-md mt-md flex justify-between items-center font-body-sm text-body-sm text-on-surface-variant">
-                <p>© 2024 Zootech Research. All rights reserved.</p>
+                <p>© 2026 Zootechnological Research. All rights reserved.</p>
                 <div class="flex gap-md">
-                    <a class="hover:text-primary transition-colors" href="#">Privacy</a>
-                    <a class="hover:text-primary transition-colors" href="#">Terms</a>
+                    <a class="hover:text-primary transition-colors text-primary underline-offset-4 hover:underline"
+                        href="privacy.html">Privacy</a>
+                    <a class="hover:text-primary transition-colors text-primary underline-offset-4 hover:underline"
+                        href="terms.html">Terms</a>
                 </div>
             </div>
         </div>
     </footer>
+
+    <!-- Mobile Menu Controller -->
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuIcon = document.getElementById('mobile-menu-icon');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        if (mobileMenuButton && mobileMenu) {
+            function toggleMobileMenu() {
+                const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+                mobileMenu.classList.toggle('hidden');
+                mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+                if (mobileMenuIcon) {
+                    mobileMenuIcon.textContent = isExpanded ? 'menu' : 'close';
+                }
+            }
+
+            function closeMobileMenu() {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
+                if (mobileMenuIcon) {
+                    mobileMenuIcon.textContent = 'menu';
+                }
+            }
+
+            mobileMenuButton.addEventListener('click', toggleMobileMenu);
+
+            // Automatically close the menu when a link inside it is clicked
+            mobileNavLinks.forEach((link) => {
+                link.addEventListener('click', closeMobileMenu);
+            });
+
+            // Close menu on Escape key press
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
+                    closeMobileMenu();
+                }
+            });
+
+            // Auto-close if screen is resized back to desktop
+            window.addEventListener('resize', () => {
+                if (window.innerWidth >= 768 && !mobileMenu.classList.contains('hidden')) {
+                    closeMobileMenu();
+                }
+            });
+        }
+    </script>
 </body>
 
 </html>
